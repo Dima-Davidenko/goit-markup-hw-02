@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфоліо</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="page">
     <!-- Site header -->
-    <header>
-      <!-- Web-studio Logo -->
-      <a class="link logo" href="./index.html"><span class="accent">Web</span>Studio</a>
-
+    <header class="header">
       <!-- Site navigation block -->
       <nav class="site-nav">
+        <!-- Web-studio Logo -->
+        <a class="link logo" href="./index.html"><span class="accent">Web</span>Studio</a>
         <ul class="list">
           <li>
             <a class="link current" href="./index.html">Студія</a>
@@ -29,7 +32,7 @@
       </nav>
 
       <!-- Web-studio contacts -->
-      <ul class="list">
+      <ul class="list contact-list">
         <li>
           <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
         </li>
@@ -45,9 +48,9 @@
       <ul class="list">
         <li><button class="button primary" type="button">Усі</button></li>
         <li><button class="button secondary" type="button">Веб-сайти</button></li>
-        <li><button type="button">Додатки</button></li>
-        <li><button type="button">Дизайн</button></li>
-        <li><button type="button">Маркетинг</button></li>
+        <li><button class="button secondary" type="button">Додатки</button></li>
+        <li><button class="button secondary" type="button">Дизайн</button></li>
+        <li><button class="button secondary" type="button">Маркетинг</button></li>
       </ul>
       <!-- List of projects -->
       <section class="section">
@@ -158,22 +161,22 @@
     </main>
 
     <!-- Site footer -->
-    <footer>
+    <footer class="basement">
       <!-- Web-studio Logo -->
       <a class="link logo" href="./index.html"><span class="accent">Web</span>Studio</a>
       <!-- Web-studio contacts -->
-      <address>
-        <ul>
+      <address class="adress">
+        <ul class="list">
           <li>
-            <a href="https://goo.gl/maps/LqEMvfZFrGtLSNi77" target="_blank"
+            <a class="link gmaps" href="https://goo.gl/maps/LqEMvfZFrGtLSNi77" target="_blank"
               >м. Київ, пр-т Лесі Українки, 26</a
             >
           </li>
           <li>
-            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
           <li>
-            <a href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
       </address>
