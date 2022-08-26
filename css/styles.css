@@ -1,0 +1,133 @@
+/* The first thing to do when working with color is to determine the site's color palette. */
+/* Primary text color #757575 */
+/* Titles color #212121 */
+/* Dark background light text color #FFFFFF */
+/* Primary accent color #2196F3 (logo, buttons, pseudo-buttons, hover, active, current page) */
+/* Secondary accent color #F5F4FA (non active button background) */
+/* Primary background color #FFFFFF */
+/* Secondary background color #2F303A */
+
+:root {
+  --primary-text-clr: #757575;
+  --sec-text-clr: #ffffff;
+  --title-text-clr: #212121;
+  --primary-accent-clr: #2196f3;
+  --sec-accent-clr: #f5f4fa;
+  --primary-bkg-clr: #ffffff;
+  --sec-bkg-clr: #2f303a;
+  --logo-sec-clr: #000000;
+}
+
+/* Global styles------------------------------------ */
+/* Body tag */
+.page {
+  color: var(--primary-text-clr);
+  background-color: var(--primary-bkg-clr);
+}
+
+/* Reset list styles */
+.list {
+  list-style: none;
+}
+
+/* Reset link styles */
+.link {
+  text-decoration: none;
+}
+
+/* Logo styles */
+.logo {
+  color: var(--logo-sec-clr);
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--primary-accent-clr);
+}
+
+.logo .accent {
+  color: var(--primary-accent-clr);
+}
+
+/* Button styles */
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.button.primary {
+  background-color: var(--primary-accent-clr);
+  color: var(--primary-bkg-clr);
+}
+
+.button.secondary {
+  background-color: var(--sec-accent-clr);
+  color: var(--title-text-clr);
+}
+
+.hero .button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+/* Header site navigation styles-------------------- */
+.site-nav {
+}
+
+.site-nav .link {
+  color: var(--title-text-clr);
+}
+
+.site-nav .link.current {
+  color: var(--primary-accent-clr);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--primary-accent-clr);
+}
+
+.site-nav .link.current:hover,
+.site-nav .link.current:focus {
+  color: var(--primary-text-clr);
+}
+
+/* Main content styles------------------------------- */
+
+/* Sections styles *---------- */
+
+/* Hero */
+.hero {
+  /* Temporary color to see white heading text, will be changed */
+  background-color: var(--sec-bkg-clr);
+}
+
+.hero-title {
+  color: var(--sec-text-clr);
+}
+
+/* General section */
+.section {
+}
+
+.section .title {
+  color: var(--title-text-clr);
+}
+
+/* Feature list */
+.section .features-list .title {
+  color: var(--title-text-clr);
+}
+
+/* Work list */
+.work-list {
+}
+
+/* Team description */
+.members {
+}
