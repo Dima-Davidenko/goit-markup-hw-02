@@ -21,10 +21,10 @@
 /* Global styles----------------------------------------------------- */
 /* Body tag */
 .page {
-  color: var(--primary-text-clr);
-  background-color: var(--primary-bkg-clr);
   font-family: Roboto, sans-serif;
+  color: var(--primary-text-clr);
   letter-spacing: 0.03em;
+  background-color: var(--primary-bkg-clr);
 }
 
 /* Reset list styles */
@@ -40,13 +40,13 @@
 
 /* General Logo styles */
 .link.logo {
-  color: var(--logo-sec-clr);
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  color: var(--logo-sec-clr);
 }
 
 .link.logo .accent {
@@ -64,13 +64,13 @@
 }
 
 .button.primary {
-  background-color: var(--primary-accent-clr);
   color: var(--primary-bkg-clr);
+  background-color: var(--primary-accent-clr);
 }
 
 .button.secondary {
-  background-color: var(--sec-accent-clr);
   color: var(--title-text-clr);
+  background-color: var(--sec-accent-clr);
 }
 
 /* Header ----------------------------------------------------------- */
