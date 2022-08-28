@@ -1,12 +1,3 @@
-/* Color palette. */
-/* Primary text color #757575 */
-/* Titles color #212121 */
-/* Dark background light text color #FFFFFF */
-/* Primary accent color #2196F3 (logo, buttons, pseudo-buttons, hover, active, current page) */
-/* Secondary accent color #F5F4FA (non active button background) */
-/* Primary background color #FFFFFF */
-/* Secondary background color #2F303A */
-
 :root {
   --primary-text-clr: #757575;
   --sec-text-clr: #ffffff;
@@ -20,16 +11,17 @@
   --sec-fnt-size: 14px;
   --prime-letr-space: 0.03em;
   --prime-fnt-weight: 500;
-  --sec-fnt-weight: 400;
 }
 
 /* Global styles----------------------------------------------------- */
 /* Body tag */
 .page {
   font-family: Roboto, sans-serif;
-  color: var(--primary-text-clr);
+  font-size: var(--sec-fnt-size);
   letter-spacing: var(--prime-letr-space);
+  line-height: 1.71;
   background-color: var(--primary-bkg-clr);
+  color: var(--primary-text-clr);
 }
 
 /* Reset list styles */
@@ -41,6 +33,7 @@
 .link {
   text-decoration: none;
   font-style: normal;
+  color: inherit;
 }
 
 /* General Logo styles */
@@ -50,7 +43,6 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: var(--prime-letr-space);
   color: var(--logo-sec-clr);
 }
 .link.logo .accent {
@@ -74,43 +66,37 @@
   color: var(--title-text-clr);
   background-color: var(--sec-accent-clr);
 }
+.button.secondary:hover {
+  color: var(--sec-text-clr);
+  background-color: var(--primary-accent-clr);
+}
+.button.active {
+  background-color: var(--primary-accent-clr);
+  color: var(--sec-text-clr);
+}
 
 /* Header ----------------------------------------------------------- */
 
-/* Header Site navigation styles */
-
-/* Header site navigation Logo  */
-.site-nav .link.logo:hover,
-.site-nav .link.logo:focus {
-  color: var(--primary-text-clr);
-}
-
 /* Header Site navigation link */
-.site-nav .link.page-nav {
+.header .site-nav .link.page {
   font-weight: var(--prime-fnt-weight);
-  font-size: var(--sec-fnt-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-clr);
 }
-.site-nav .link.page-nav:hover,
-.site-nav .link.page-nav:focus {
+.header .site-nav .link.page:hover,
+.header .site-nav .link.page:focus {
   color: var(--primary-accent-clr);
 }
 
 /* Header Site navigation link Current page */
-.site-nav .link.page-nav.current {
+.header .site-nav .link.page.current {
   color: var(--primary-accent-clr);
-}
-.site-nav .link.page-nav.current:hover,
-.site-nav .link.page-nav.current:focus {
-  color: var(--primary-text-clr);
 }
 
 /* Header Contacts styles */
 .header .contact-list .link {
   font-weight: var(--prime-fnt-weight);
-  font-size: var(--sec-fnt-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-clr);
@@ -122,21 +108,19 @@
 /* Main ------------------------------------------------------------- */
 
 /* Main General Sections Title */
-.main .section > .title {
-  font-weight: 700;
+.main .section-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: var(--prime-letr-space);
   color: var(--title-text-clr);
 }
 
 /* Main Hero */
-.main .hero {
+.main .section.hero {
   background-color: var(--sec-bkg-clr);
 }
 /* Main Hero Title */
-.main .hero .hero-title {
+.main .section.hero .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -146,7 +130,7 @@
   color: var(--sec-text-clr);
 }
 /* Main Hero button */
-.main .hero .button.primary {
+.main .section.hero .button.primary {
   font-weight: 700;
   font-size: var(--primary-fnt-size);
   line-height: 1.88;
@@ -156,8 +140,8 @@
 
 /* Main Feature list */
 
-/* Main Feature list Title */
-.main .section.features > .title {
+/* Main Feature list Title ivisible */
+.main .section.features .section-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -170,29 +154,18 @@
   overflow: hidden;
 }
 .main .section.features .features-list .title {
-  font-weight: 700;
   font-size: var(--sec-fnt-size);
   line-height: 1.14;
-  letter-spacing: var(--prime-letr-space);
-
   text-transform: uppercase;
   color: var(--title-text-clr);
 }
-/* Main Feature list description */
-.main .section.features .features-list .description {
-  font-weight: var(--sec-fnt-weight);
-  font-size: var(--sec-fnt-size);
-  line-height: 1.7;
-}
-
-/* Main Webstudio work examples */
 
 /* Main Team */
-.section.team {
+.main .section.team {
   background-color: var(--sec-accent-clr);
 }
 /* Main Team Team list Card */
-.section.team .team-list .card {
+.main .section.team .team-list .card {
   background-color: var(--primary-bkg-clr);
 }
 /* Main Team Team list Card Title */
@@ -200,13 +173,11 @@
   font-weight: var(--prime-fnt-weight);
   font-size: var(--primary-fnt-size);
   line-height: 1.19;
-  letter-spacing: var(--prime-letr-space);
   text-align: center;
   color: var(--title-text-clr);
 }
 /* Main Team Team list Card Description */
 .main .section.team .team-list .description {
-  font-weight: var(--sec-fnt-weight);
   font-size: var(--primary-fnt-size);
   line-height: 1.19;
   text-align: center;
@@ -219,10 +190,7 @@
 }
 /* Footer Contacts */
 .footer .contacts .link.contact {
-  font-weight: var(--sec-fnt-weight);
-  font-size: var(--sec-fnt-size);
   line-height: 1.71;
-  letter-spacing: var(--prime-letr-space);
   color: rgba(255, 255, 255, 0.6);
 }
 .footer .contacts .link.contact:hover {
@@ -230,21 +198,12 @@
 }
 /* Footer WebStudio Location */
 .footer .contacts .link.gmaps {
-  font-size: var(--sec-fnt-size);
   line-height: 1.71;
-  letter-spacing: var(--prime-letr-space);
   color: var(--sec-text-clr);
-}
-.footer .contacts .link.gmaps:hover {
-  color: var(--primary-accent-clr);
 }
 /* Footer Logo change color because of dark background*/
 .footer .link.logo {
   color: var(--sec-text-clr);
-}
-.footer .link.logo:hover,
-.footer .link.logo:focus {
-  color: var(--primary-text-clr);
 }
 
 /* ------------------------------------------------------------------- */
@@ -256,7 +215,7 @@
 /* Main Projects */
 
 /* Main Projects hide title */
-.main .section.projects > .title {
+.main .section.projects .projects-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -268,14 +227,8 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Main Projects button */
-.main .section.projects .button.secondary:hover {
-  color: var(--sec-text-clr);
-  background-color: var(--primary-accent-clr);
-}
 /* Main Projects Project list title */
 .main .section.projects .projects-list .title {
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -283,8 +236,6 @@
 }
 /* Main Projects Project list description */
 .main .section.projects .projects-list .description {
-  font-weight: var(--sec-fnt-weight);
   font-size: var(--primary-fnt-size);
   line-height: 1.88;
-  color: var(--primary-text-clr);
 }
